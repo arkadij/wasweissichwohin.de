@@ -1,17 +1,16 @@
 <template>
   <div class="welcome container">
-      <p>Welcome</p>
+      <p class="bg-red-500">Welcome</p>
   </div>
 </template>
 
 <script>
+
 export default {
 
 }
 </script>
 
 <style>
-    .welcome{
-        text-align: center;
-    }
+    
 </style>
