@@ -1,5 +1,7 @@
 # wasweissichwohin.de
 
+v1.0 A live-chat SPA with firebase authentication
+
 ## Project setup
 ```
 npm install
