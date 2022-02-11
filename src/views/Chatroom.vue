@@ -1,10 +1,5 @@
 <template>
-  <div class="container">
-    <Navbar />
-  </div>
-  <div>
-      <p>Chatroom</p>
-  </div>
+<Navbar />
 </template>
 
 <script>
