@@ -1,7 +1,7 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Welcome</router-link>
-  </div>
+  </div> -->
 
   <router-view/>
 </template>
@@ -18,4 +18,5 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 </style>
