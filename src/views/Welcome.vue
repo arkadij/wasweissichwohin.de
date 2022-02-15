@@ -8,7 +8,6 @@
       <SignupForm @signup="enterChat" />
       <p>Log in <span class="signup" @click="showLogin = true"> Instead </span></p>
     </div>
-
   </div>
 </template>
 
@@ -26,12 +25,10 @@ export default {
       const router = useRouter()
 
       const enterChat = () => {
-        router.push({path: 'Chatroom'})
+        router.push({name: 'Chatroom'})
       }
-
       return { showLogin , enterChat}
-    }
-    
+    } 
 }
 </script>
 
