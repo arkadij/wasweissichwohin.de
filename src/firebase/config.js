@@ -4,12 +4,12 @@ import 'firebase/auth'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAzgH-bwApsIegMPEnL-QcFoxkfYfAzA3A",
-  authDomain: "wasweissichwohin.firebaseapp.com",
-  projectId: "wasweissichwohin",
-  storageBucket: "wasweissichwohin.appspot.com",
-  messagingSenderId: "811873523066",
-  appId: "1:811873523066:web:949c8d0c2e84c9986e72c3"
+  apiKey: "AIzaSyCdKYi9h2dKt-UaK4YUcIV8gnIX8zufbPY",
+  authDomain: "wasweissichwohin-52b98.firebaseapp.com",
+  projectId: "wasweissichwohin-52b98",
+  storageBucket: "wasweissichwohin-52b98.appspot.com",
+  messagingSenderId: "863593627104",
+  appId: "1:863593627104:web:a50aef2ceb3a8a36eb3f85"
 };
 
 firebase.initializeApp(firebaseConfig)

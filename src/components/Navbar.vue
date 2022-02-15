@@ -5,7 +5,9 @@
     <button class="basic-btn" @click="handleClick">Logout</button>
 </template>
 
-<script>import { useRouter } from "vue-router"
+<script>
+
+import { useRouter } from "vue-router"
 import getUser from "../composables/getUser.js"
 import useLogout from "../composables/useLogout.js"
 
