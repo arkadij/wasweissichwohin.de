@@ -6,7 +6,7 @@
         >
         </textarea>
         <div class="error">{{ error }}</div>
-        <button class="submit" @click.prevent="handleSubmit">Send</button>
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" @click.prevent="handleSubmit">Send</button>
     </form>
 </template>
 

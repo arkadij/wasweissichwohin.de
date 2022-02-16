@@ -1,11 +1,11 @@
 <template>
-  <div class="chat-window">
+  <div class="">
       <div class="error" v-if="error">{{error}}</div>
       <div v-if="documents" class="messages" ref="container">
           <div v-for="doc in formattedDocuments" :key="doc.id" class="single">
-              <span class="created-at">{{ doc.createdAt }}</span>
-              <span class="name">{{ doc.name }} :</span>
-              <span class="msg">{{doc.message}}</span>
+              <span class="">{{ doc.createdAt }}</span>
+              <span class="">{{ doc.name }} :</span>
+              <span class="">{{doc.message}}</span>
           </div>
       </div>
   </div>

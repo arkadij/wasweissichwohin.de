@@ -1,10 +1,10 @@
 <template>
-  <form @submit.prevent="handleSubmit">
-      <input type="text" required placeholder="email" v-model="email">
-      <input type="password" required placeholder="password" v-model="password">
-      <div class="error">{{ error }}</div>
-      <button class="basic-btn">Log in</button>
-  </form>
+        <form @submit.prevent="handleSubmit">
+            <input type="text" required placeholder="email" v-model="email">
+            <input type="password" required placeholder="password" v-model="password">
+            <div class="">{{ error }}</div>
+            <button class="">Log in</button>
+        </form>
 </template>
 
 <script>
@@ -33,7 +33,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
