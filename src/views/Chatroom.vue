@@ -1,24 +1,30 @@
-<template>
+<!-- <template>
     <Navbar />
     <NewChatForm />
     <ChatWindow />
-</template>
-
-<!-- <template>
-  <div class="chatroom-container">
-  <div class="Chatroom"></div>
-  <div class="Footer"></div>
-  <div class="navbar"></div>
-  <div class="Logo"></div>
-  <div class="Header"></div>
-  <div class="Online"></div>
-  <div class="Input">
-    <div class="Input-field"></div>
-    <div class="Send"></div>
-    <div class="options"></div>
-  </div>
-</div>
 </template> -->
+
+<template>
+  <div class="chatroom-container">
+    <div class="Chatroom bg-gray-400">
+        <ChatWindow />
+    </div>
+    <div class="Logo bg-yellow-400">Logo</div>
+    <div class="Header bg-yellow-700">Header</div>
+    <div class="navbar">
+        <!-- <Navbar /> -->
+    </div>
+    <div class="Online bg-green-500">Online</div>
+    <div class="Footer bg-green-300">Footer</div>
+    
+    <div class="Input bg-blue-500">
+        <div class="options bg-pink-400">options</div>
+        <div class="Input-field bg-blue-200">Input field</div>
+        <div class="Send bg-purple-600">Send btn</div>
+
+    </div>
+</div>
+</template>
 
 <script>
 
