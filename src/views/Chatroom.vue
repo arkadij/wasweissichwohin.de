@@ -1,17 +1,21 @@
 <!-- <template>
     <Navbar />
-    <NewChatForm />
+    
     <ChatWindow />
 </template> -->
 
 <template>
   <div class="chatroom-container">
+    
+    <div class="Logo bg-yellow-400">Logo</div>
+    <!-- Chatroom Header -->
+    <div class="Header bg-yellow-700">
+    <!-- Chat Window -->
+    </div>
     <div class="Chatroom bg-gray-400">
         <ChatWindow />
     </div>
-    <div class="Logo bg-yellow-400">Logo</div>
-    <div class="Header bg-yellow-700">Header</div>
-    <div class="navbar">
+    <div class="navbar bg-error">
         <!-- <Navbar /> -->
     </div>
     <div class="Online bg-green-500">Online</div>
@@ -19,9 +23,10 @@
     
     <div class="Input bg-blue-500">
         <div class="options bg-pink-400">options</div>
-        <div class="Input-field bg-blue-200">Input field</div>
+        <div class="Input-field bg-blue-200">
+            <NewChatForm />
+        </div>
         <div class="Send bg-purple-600">Send btn</div>
-
     </div>
 </div>
 </template>
