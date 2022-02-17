@@ -3,3 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar-icon{
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mx-auto shadow-lg text-green-600 hover:bg-green-700;
+}
+
+.btn{
+    @apply bg-transparent border-2 border-gray-900 border-solid py-0.5 px-3;
+}
