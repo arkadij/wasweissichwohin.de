@@ -1,54 +1,56 @@
-
-<template>
-    
+<template> 
   <form class="w-full max-w-sm" @submit.prevent="handleSubmit">
       <!-- Username-->
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">
-          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="Username">
             Username
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 
-          border-gray-200 rounded w-full py-2 px-4 
-          text-gray-700 leading-tight focus:outline-none 
-          focus:bg-white focus:border-purple-500" type="text" required placeholder="display name" v-model="displayName">
+          <input class="input-fields-welcome" type="text" required placeholder="Username" v-model="displayName">
         </div>
       </div>
       <!-- Email -->
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">
-          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="Email">
             Email
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 
-          border-gray-200 rounded w-full py-2 px-4 
-          text-gray-700 leading-tight focus:outline-none 
-          focus:bg-white focus:border-purple-500" type="email" required placeholder="email" v-model="email">
+          <input class="input-fields-welcome" type="email" required placeholder="email" v-model="email">
         </div>
       </div>
-      <!-- Password -->
+      <!-- Password input -->
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">
-          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="Password">
             Password
           </label>
         </div>
         <div class="md:w-2/3">
-          <input class="bg-gray-200 appearance-none border-2 
-          border-gray-200 rounded w-full py-2 px-4 
-          text-gray-700 leading-tight focus:outline-none 
-          focus:bg-white focus:border-purple-500" type="password" required placeholder="password" v-model="password">
+          <input class="input-fields-welcome" type="password" required placeholder="password" v-model="password">
         </div>
       </div>
-  
-      <div class="error">{{ error }}</div>
-      <button class="btn">Sign up</button>
+      <!-- SignUp btn -->
+      <div class="md:flex md:items-center">
+        <div class="md:w-1/3"></div>
+          <div class="md:w-2/3">
+            <button class="btn">
+              Sign Up
+            </button>
+          </div>
+      </div>
+      <!-- Error msg -->
+        <div class="md:flex md:items-center pt-8">
+          <div class="md:w-1/3"></div>
+            <div class="md:w-2/3">
+              <div class="text-red-500 text-sm font-bold uppercase">{{ error }}</div>
+            </div>
+        </div>
   </form>
-       
+      
 </template>
 
 <script>
@@ -78,5 +80,4 @@ export default {
 </script>
 
 <style>
-
 </style>

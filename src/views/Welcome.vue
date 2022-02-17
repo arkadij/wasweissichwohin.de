@@ -1,12 +1,20 @@
 <template>
-    <div v-if="showLogin">
-      <LoginForm @login="enterChat" />
-      <p>Create Account<span class="" @click="showLogin = false"> Here </span></p>
+  <div class="flex h-screen">
+    <div class="mx-auto items-center my-auto">
+      <div v-if="showLogin">
+        <LoginForm @login="enterChat" />
+        <div class="text-center pt-2">
+          <button @click="showLogin = false"> Show Sign Up</button>
+        </div>
+      </div>
+      <div v-else>
+        <SignupForm @signup="enterChat" />
+        <div class="text-center pt-2">
+          <button @click="showLogin = true"> Swap Log in</button>
+        </div>
+      </div>
     </div>
-    <div v-else>
-      <SignupForm @signup="enterChat" />
-      <p>Log in <span class="" @click="showLogin = true"> Instead </span></p>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -21,7 +29,6 @@ export default {
     setup() {
       const showLogin = ref(true)
       const router = useRouter()
-
       const enterChat = () => {
         router.push({name: 'Chatroom'})
       }
@@ -30,6 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
    
+
 </style>

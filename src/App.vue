@@ -1,10 +1,5 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Welcome</router-link>
-  </div> -->
-  
-  <router-view/>
-
+      <router-view />   
 </template>
 
 
@@ -14,5 +9,8 @@
 
 
 <style>
+#app{
+   
+}
 
 </style>

@@ -4,6 +4,22 @@
     <ChatWindow />
 </template>
 
+<!-- <template>
+  <div class="chatroom-container">
+  <div class="Chatroom"></div>
+  <div class="Footer"></div>
+  <div class="navbar"></div>
+  <div class="Logo"></div>
+  <div class="Header"></div>
+  <div class="Online"></div>
+  <div class="Input">
+    <div class="Input-field"></div>
+    <div class="Send"></div>
+    <div class="options"></div>
+  </div>
+</div>
+</template> -->
+
 <script>
 
 import getUser from "../composables/getUser";
