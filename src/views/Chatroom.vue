@@ -7,14 +7,16 @@
 <template>
   <div class="chatroom-container">
     
-    <div class="logo bg-yellow-400">Logo</div>
-    <!-- Chatroom Header -->
-    <div class="header bg-yellow-700">
-    header
+    <div class="logo flex">
+        <Logo />
+    </div>
+    <!-- Header -->
+    <div class="header flex justify-start">
+        <Header />
     </div>
     <!-- weather field -->
-    <div class="weather bg-red-400">
-        weather
+    <div class="weather flex">
+        <Weather />
     </div>
     <!-- Chat Window -->
     <div class="chatroom bg-gray-400">
@@ -23,8 +25,14 @@
     <div class="navbar bg-error">
         <!-- <Navbar /> -->
     </div>
-    <div class="online bg-green-500">Online</div>
-    <div class="footer bg-green-300">Footer</div>
+    <!-- Online -->
+    <div class="online bg-green-500">
+        Online
+    </div>
+    <!-- Footer -->
+    <div class="footer flex">
+        <Footer />
+    </div>
     
     <div class="input bg-blue-500">
         <div class="options bg-pink-400">options</div>
@@ -44,9 +52,13 @@ import { watch } from 'vue'
 import NewChatForm from "../components/NewChatForm.vue";
 import ChatWindow from '../components/ChatWindow.vue'
 import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
+import Header from "../components/Header.vue";
+import Weather from "../components/Weather.vue";
+import Logo from "../components/Logo.vue";
 
 export default {
-    components: { NewChatForm, ChatWindow, Navbar },
+    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo },
     setup(){
         const { user } = getUser()
         const router = useRouter()
