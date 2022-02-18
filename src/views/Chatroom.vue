@@ -19,14 +19,14 @@
         <Weather />
     </div>
     <!-- Chat Window -->
-    <div class="chatroom bg-gray-400">
+    <div class="chatwindow flex">
         <ChatWindow />
     </div>
-    <div class="navbar bg-error">
+    <div class="navbar bg-primary">
         <!-- <Navbar /> -->
     </div>
     <!-- Online -->
-    <div class="online bg-green-500">
+    <div class="online bg-primary">
         Online
     </div>
     <!-- Footer -->

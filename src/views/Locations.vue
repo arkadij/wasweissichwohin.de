@@ -1,37 +1,45 @@
 <template>
   <div class="locations-container">
     
-    <div class="logo bg-yellow-400">
-        Logo
+    <div class="logo flex">
+        <Logo />
     </div>
-    <!-- Chatroom Header -->
-    <div class="header bg-yellow-700">
-    header
+    <!-- Header -->
+    <div class="header flex">
+        <Header />
     </div>
     <!-- weather field -->
-    <div class="weather bg-red-400">
-        weather
+    <div class="weather flex">
+        <Weather />
     </div>
     <!-- Entries-->
-    <div class="entries bg-gray-400">
-        
+    <div class="entries bg-trinary">
+        <Entries />
     </div>
     <!-- Online -->
-    <div class="online bg-green-500">
-        Online
+    <div class="online flex">
+        <Online />
     </div>
     <div class="navbar bg-error">
         <!-- <Navbar /> -->
     </div>
-    
-    <div class="footer bg-green-300">Footer</div>
+    <!-- Footer -->
+    <div class="footer flex">
+        <Footer />
+    </div>
     
 </div>
 </template>
 
 <script>
+import Logo from "../components/Logo.vue";
+import Header from "../components/Header.vue";
+import Weather from "../components/Weather.vue";
+import Entries from "../components/Entries.vue";
+import Online from "../components/Online.vue";
+import Footer from "../components/Footer.vue";
 export default {
-
+    components: { Logo, Header, Weather, Entries, Online, Footer }
 }
 </script>
 

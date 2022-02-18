@@ -9,6 +9,7 @@ module.exports = {
         trinary: '#74959A',
         quaternary: '#98B4AA',
         beige:'#F1E0AC',
+        error: '#C84B31',
       },
       fontFamily: {
         body:['Bebas Neue'],

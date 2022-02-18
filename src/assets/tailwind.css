@@ -11,6 +11,8 @@
 .btn{
     @apply bg-transparent border-2 border-gray-900 border-solid py-0.5 px-3;
 }
+.error{@apply text-error text-sm font-bold uppercase}
+
 .input-fields-welcome{
     @apply 
     bg-gray-200 appearance-none border-2       
@@ -28,12 +30,12 @@
     gap: 0px 0px; 
     grid-template-areas: 
       "logo header weather"
-      "navbar chatroom online"
-      "navbar chatroom online"
+      "navbar chatwindow online"
+      "navbar chatwindow online"
       "navbar input online"
       "navbar footer footer"
 }
-.chatroom { grid-area: chatroom; }
+.chatwindow { grid-area: chatwindow; }
 .weather { grid-area: weather; }
 .footer { grid-area: footer; }
 .navbar { grid-area: navbar; }

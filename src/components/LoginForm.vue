@@ -37,7 +37,7 @@
         <div class="md:flex md:items-center pt-8">
           <div class="md:w-1/3"></div>
             <div class="md:w-2/3">
-              <div class="text-red-500 text-sm font-bold uppercase">{{ error }}</div>
+              <div class="error">{{ error }}</div>
             </div>
         </div>
         </form>
