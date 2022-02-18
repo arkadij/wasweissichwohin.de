@@ -27,31 +27,32 @@
     grid-template-rows: 0.7fr 0.6fr 1.7fr 1.7fr 0.6fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "Logo Header Header"
-      "navbar Chatroom Online"
-      "navbar Chatroom Online"
-      "navbar Input Online"
-      "navbar Footer Footer"
+      "logo header weather"
+      "navbar chatroom online"
+      "navbar chatroom online"
+      "navbar input online"
+      "navbar footer footer"
 }
-.Chatroom { grid-area: Chatroom; }
-.Footer { grid-area: Footer; }
+.chatroom { grid-area: chatroom; }
+.weather {grid-area: weather; }
+.footer { grid-area: footer; }
 .navbar { grid-area: navbar; }
-.Logo { grid-area: Logo; }
-.Header { grid-area: Header; }
-.Online { grid-area: Online; }
-.Input {
+.logo { grid-area: logo; }
+.header { grid-area: header; }
+.online { grid-area: online; }
+.input {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 0.6fr 2fr 0.4fr; 
   gap: 0px 0px; 
   grid-template-areas: 
     "options options options"
-    "Input-field Input-field Input-field"
-    "Send . ."; 
-  grid-area: Input; 
+    "input-field input-field input-field"
+    "send . ."; 
+  grid-area: input; 
 }
-.Input-field { grid-area: Input-field; }
-.Send { grid-area: Send; }
+.input-field { grid-area: input-field; }
+.send { grid-area: send; }
 .options { grid-area: options; }
 
 

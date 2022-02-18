@@ -7,26 +7,31 @@
 <template>
   <div class="chatroom-container">
     
-    <div class="Logo bg-yellow-400">Logo</div>
+    <div class="logo bg-yellow-400">Logo</div>
     <!-- Chatroom Header -->
-    <div class="Header bg-yellow-700">
-    <!-- Chat Window -->
+    <div class="header bg-yellow-700">
+    header
     </div>
-    <div class="Chatroom bg-gray-400">
+    <!-- weather field -->
+    <div class="weather bg-red-400">
+        weather
+    </div>
+    <!-- Chat Window -->
+    <div class="chatroom bg-gray-400">
         <ChatWindow />
     </div>
     <div class="navbar bg-error">
         <!-- <Navbar /> -->
     </div>
-    <div class="Online bg-green-500">Online</div>
-    <div class="Footer bg-green-300">Footer</div>
+    <div class="online bg-green-500">Online</div>
+    <div class="footer bg-green-300">Footer</div>
     
-    <div class="Input bg-blue-500">
+    <div class="input bg-blue-500">
         <div class="options bg-pink-400">options</div>
-        <div class="Input-field bg-blue-200">
+        <div class="input-field bg-blue-200">
             <NewChatForm />
         </div>
-        <div class="Send bg-purple-600">Send btn</div>
+        <div class="send bg-purple-600">Send btn</div>
     </div>
 </div>
 </template>
