@@ -1,12 +1,5 @@
-<!-- <template>
-    <Navbar />
-    
-    <ChatWindow />
-</template> -->
-
 <template>
   <div class="chatroom-container">
-    
     <div class="logo flex">
         <Logo />
     </div>
@@ -15,18 +8,18 @@
         <Header />
     </div>
     <!-- weather field -->
-    <div class="weather flex">
+    <div class="weather flex bg-error">
         <Weather />
     </div>
     <!-- Chat Window -->
     <div class="chatwindow flex">
         <ChatWindow />
     </div>
-    <div class="navbar bg-primary">
-        <!-- <Navbar /> -->
+    <div class="navbar flex">
+        <Navbar /> 
     </div>
     <!-- Online -->
-    <div class="online bg-primary">
+    <div class="online bg-primary bg-error">
         Online
     </div>
     <!-- Footer -->
@@ -34,12 +27,11 @@
         <Footer />
     </div>
     
-    <div class="input bg-blue-500">
-        <div class="options bg-pink-400">options</div>
-        <div class="input-field bg-blue-200">
+    <div class="input flex">
+        <!-- <div class="options">options</div> -->
+        <div class="input-field bg-primary">
             <NewChatForm />
-        </div>
-        <div class="send bg-purple-600">Send btn</div>
+        </div>    
     </div>
 </div>
 </template>
@@ -62,7 +54,7 @@ export default {
     setup(){
         const { user } = getUser()
         const router = useRouter()
-        
+
         watch(user, () => {
             if(!user.value) {
                 router.push({path: '/'})

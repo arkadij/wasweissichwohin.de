@@ -1,11 +1,13 @@
 <template>
-  <div class="">
-      <div class="error" v-if="error">{{error}}</div>
-      <div v-if="documents" class="messages" ref="container">
-          <div v-for="doc in formattedDocuments" :key="doc.id" class="single">
-              <span class="">{{ doc.createdAt }}</span>
-              <span class="">{{ doc.name }} :</span>
-              <span class="">{{doc.message}}</span>
+  <div class="dark flex-wrap p-2 w-full h-full box-content overflow-auto bg-primary">
+      <div class="error" v-if="error">{{ error }}</div>
+      <div v-if="documents" class="h-full overflow-auto" ref="messages">
+          <div v-for="doc in formattedDocuments" 
+          :key="doc.id" 
+          class="my-2">
+              <span class="block text-gray-300 text-xs">{{ doc.createdAt}}</span>
+              <span class="text-beige font-bold mr-1">{{ doc.name }}</span>
+              <span class="text-white">{{doc.message}}</span>
           </div>
       </div>
   </div>
@@ -15,13 +17,11 @@
 
 import getCollection from "../composables/getCollection"
 import { formatDistanceToNow } from 'date-fns'
-import { computed, ref } from '@vue/reactivity'
-import { onUpdated } from '@vue/runtime-core'
+import { computed, ref, onUpdated } from 'vue'
 
 export default {
     setup(){
         const {error, documents} = getCollection('messages')
-
         const formattedDocuments = computed(() => {
             if(documents.value) {
                 return documents.value.map(doc => {
@@ -31,12 +31,11 @@ export default {
             }
         })
         //auto scroll
-        const container = ref(null)
+        const messages = ref(null)
         onUpdated(() => {
-            container.value.scrollTop = container.value.scrollHeight
-        })
-        
-        return {error, documents, formattedDocuments, container}
+            messages.value.scrollTop = messages.value.scrollHeight
+            })
+        return { error, documents, formattedDocuments, messages }
     }
 }
 </script>

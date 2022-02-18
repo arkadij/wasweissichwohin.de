@@ -1,24 +1,12 @@
-<!-- <template>
-    <form>
-        <textarea placeholder="Message goes brrr"
-        v-model="message"
-        @keypress.enter.prevent="handleSubmit"
-        >
-        </textarea>
-        <div class="error">{{ error }}</div>
-        <button class="btn" @click.prevent="handleSubmit">Send</button>
-    </form>
-</template> -->
-
 <template>
     <form>
-        <textarea placeholder="Message goes brrr"
+        <textarea class="w-full" placeholder="Message goes brrr"
         v-model="message"
         @keypress.enter.prevent="handleSubmit"
         >
         </textarea>
         <div class="error">{{ error }}</div>
-        <button class="btn" @click.prevent="handleSubmit">Send</button>
+        <button class="btn" @click.prevent="handleSubmit">Send</button> 
     </form>
 </template>
 
@@ -32,9 +20,7 @@ export default {
         const { user } = getUser()
         const message = ref('')
         const { addDoc, error } = useCollection('messages')
-
         const handleSubmit = async () => {
-            
             const chat = {
                 name:user.value.displayName,
                 message: message.value,
@@ -45,12 +31,11 @@ export default {
                 message.value = '' 
             }
         }
-        
-        return { handleSubmit, error, message}
+        return { handleSubmit, error, message }
     }
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

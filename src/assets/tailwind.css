@@ -4,10 +4,9 @@
 @tailwind utilities;
 
 .navbar-icon{
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mx-auto shadow-lg 
-    text-green-600 hover:bg-green-700;
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mx-auto 
+    text-beige;
 }
-
 .btn{
     @apply bg-transparent border-2 border-gray-900 border-solid py-0.5 px-3;
 }
@@ -15,9 +14,9 @@
 
 .input-fields-welcome{
     @apply 
-    bg-gray-200 appearance-none border-2       
-    border-gray-200 rounded w-full py-2 px-4       
-    text-gray-700 leading-tight focus:outline-none 
+    bg-gray-200 appearance-none border-2   
+    border-gray-200 rounded w-full py-2 px-4 
+    text-gray-700 leading-tight focus:outline-none
     focus:bg-white focus:border-purple-500
 }
 .chatroom-container{
@@ -27,13 +26,13 @@
     grid-auto-rows: 1fr; 
     grid-template-columns: 0.3fr 2.1fr 0.6fr; 
     grid-template-rows: 0.7fr 0.6fr 1.7fr 1.7fr 0.6fr; 
-    gap: 0px 0px; 
+    gap: 6px 6px; 
     grid-template-areas: 
       "logo header weather"
       "navbar chatwindow online"
       "navbar chatwindow online"
       "navbar input online"
-      "navbar footer footer"
+      "navbar footer footer";
 }
 .chatwindow { grid-area: chatwindow; }
 .weather { grid-area: weather; }
@@ -45,12 +44,11 @@
 .input {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.6fr 2fr 0.4fr; 
+  grid-template-rows: 0.2fr 2fr; 
   gap: 0px 0px; 
   grid-template-areas: 
     "options options options"
-    "input-field input-field input-field"
-    "send . ."; 
+    "input-field input-field input-field"; 
   grid-area: input; 
 }
 .input-field { grid-area: input-field; }
@@ -65,7 +63,7 @@
   grid-auto-rows: 1fr; 
   grid-template-columns: 0.3fr 2.1fr 0.6fr; 
   grid-template-rows: 0.7fr 0.6fr 1.7fr 1.7fr 0.6fr; 
-  gap: 0px 0px; 
+  gap: 6px 6px; 
   grid-template-areas: 
     "logo header weather"
     "navbar entries online"
