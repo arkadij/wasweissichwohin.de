@@ -22,9 +22,9 @@ const signup = async (email, password, displayName) => {
         error.value = err.message
     }
 }
-// the job of this function is to return the values error & signup. We do this, because we don't want to invoke that function in signup
+// don't want to invoke that function on signup
 const useSignup = () => {
-    return { error, signup}
+    return { error, signup }
 }
 
 export default useSignup

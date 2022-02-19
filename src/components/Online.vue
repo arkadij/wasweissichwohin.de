@@ -11,8 +11,7 @@
 </template>
 
 <script>
-import { watch } from '@vue/runtime-core'
-import { ref } from 'vue'
+
 import getUser from "../composables/getUser"
 
 

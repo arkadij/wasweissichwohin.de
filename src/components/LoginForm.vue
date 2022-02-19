@@ -51,7 +51,7 @@ import useLogin from '../composables/useLogin.js'
 
 
 export default {
-     // props & context so we can use .emit
+  
     setup(props, context) {
 
         const email = ref('')
