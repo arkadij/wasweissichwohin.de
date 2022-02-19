@@ -19,8 +19,8 @@
         <Navbar /> 
     </div>
     <!-- Online -->
-    <div class="online bg-primary bg-error">
-        Online
+    <div class="online flex">
+        <Online />
     </div>
     <!-- Footer -->
     <div class="footer flex">
@@ -48,9 +48,10 @@ import Footer from "../components/Footer.vue";
 import Header from "../components/Header.vue";
 import Weather from "../components/Weather.vue";
 import Logo from "../components/Logo.vue";
+import Online from "../components/Online.vue";
 
 export default {
-    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo },
+    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo, Online },
     setup(){
         const { user } = getUser()
         const router = useRouter()
