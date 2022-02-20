@@ -28,8 +28,11 @@
         <div class="md:flex md:items-center">
           <div class="md:w-1/3"></div>
             <div class="md:w-2/3">
-              <button class="btn">
+              <button v-if="!isLoading" class="btn">
                 Log in
+              </button>
+              <button v-else disabled class="btn">
+                Loading...
               </button>
             </div>
         </div>
@@ -37,7 +40,7 @@
         <div class="md:flex md:items-center pt-8">
           <div class="md:w-1/3"></div>
             <div class="md:w-2/3">
-              <div class="error">{{ error }}</div>
+              <div v-if="error" class="error">{{ error }}</div>
             </div>
         </div>
         </form>
@@ -57,7 +60,7 @@ export default {
         const email = ref('')
         const password = ref('')
 
-        const { error, login } = useLogin()
+        const { error, login, isLoading } = useLogin()
         
         const handleSubmit = async () => {
             await login(email.value, password.value)
@@ -66,7 +69,7 @@ export default {
             }
         }
 
-        return { email, password, handleSubmit, error}
+        return { email, password, handleSubmit, error, isLoading}
     }
 }
 </script>

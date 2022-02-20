@@ -37,8 +37,11 @@
       <div class="md:flex md:items-center">
         <div class="md:w-1/3"></div>
           <div class="md:w-2/3">
-            <button class="btn">
+            <button v-if="!isLoading" class="btn">
               Sign Up
+            </button>
+            <button v-else class="btn">
+              Loading
             </button>
           </div>
       </div>
@@ -46,7 +49,7 @@
         <div class="md:flex md:items-center pt-8">
           <div class="md:w-1/3"></div>
             <div class="md:w-2/3">
-              <div class="text-red-500 text-sm font-bold uppercase">{{ error }}</div>
+              <div v-if="error" class="error">{{ error }}</div>
             </div>
         </div>
   </form>
@@ -62,7 +65,7 @@ import useSignup from '../composables/useSignup'
 export default {
      // props & context so we can use .emit
     setup(props, context) {
-        const { error, signup } = useSignup() // error and signup are the values we return from the useSignup function
+        const { error, signup, isLoading } = useSignup() // error and signup are the values we return from the useSignup function
         const displayName = ref('')
         const email = ref('')
         const password = ref('')
@@ -74,7 +77,7 @@ export default {
             }
         }
 
-        return { displayName, email, password, handleSubmit, error, signup }
+        return { displayName, email, password, handleSubmit, error, signup, isLoading }
     }
 }
 </script>
