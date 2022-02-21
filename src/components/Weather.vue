@@ -13,7 +13,7 @@
 
 <script>
 // Open weather api
-const APIKEY = "c2ac0d3bbf9a640778032fa63629abc0"
+const API_KEY = "c2ac0d3bbf9a640778032fa63629abc0"
 
 export default {
   setup(){

@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Welcome from '../views/Welcome.vue'
 import Chatroom from '../views/Chatroom.vue'
 import Locations from '../views/Locations.vue'
+import Create from '../views/Create.vue'
 import { projectAuth } from '../firebase/config.js'
+
 
   const requireAuth = (to, from, next) => {
     let user = projectAuth.currentUser
@@ -41,7 +43,13 @@ const routes = [
     name: 'Locations',
     component: Locations,
     beforeEnter: requireAuth
-  }  
+  },
+  {
+    path: '/locations/create',
+    name: 'Create',
+    component: Create,
+    beforeEnter: requireAuth
+  }   
 ]
 
 const router = createRouter({

@@ -26,7 +26,6 @@
     <div class="footer flex">
         <Footer />
     </div>
-    
     <div class="input flex">
         <!-- <div class="options">options</div> -->
         <div class="input-field bg-primary">

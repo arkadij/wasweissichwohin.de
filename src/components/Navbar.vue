@@ -6,7 +6,7 @@
         <router-link class="navbar-icon" to="/locations">
             Locations
         </router-link>
-        <router-link class="navbar-icon" to="/create">
+        <router-link class="navbar-icon" to="/locations/create">
             Create
         </router-link>
         <div class="items-end">
