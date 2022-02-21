@@ -40,8 +40,8 @@
             <button v-if="!isLoading" class="btn">
               Sign Up
             </button>
-            <button v-else class="btn">
-              Loading
+            <button v-else disabled class="btn">
+              Loading...
             </button>
           </div>
       </div>

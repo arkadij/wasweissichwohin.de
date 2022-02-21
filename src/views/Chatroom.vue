@@ -37,17 +37,17 @@
 
 <script>
 
-import getUser from "../composables/getUser";
+import getUser from "../composables/getUser"
 import { useRouter } from "vue-router" 
 import { watch } from 'vue'
-import NewChatForm from "../components/NewChatForm.vue";
+import NewChatForm from "../components/NewChatForm.vue"
 import ChatWindow from '../components/ChatWindow.vue'
-import Navbar from "../components/Navbar.vue";
-import Footer from "../components/Footer.vue";
-import Header from "../components/Header.vue";
-import Weather from "../components/Weather.vue";
-import Logo from "../components/Logo.vue";
-import Online from "../components/Online.vue";
+import Navbar from "../components/Navbar.vue"
+import Footer from "../components/Footer.vue"
+import Header from "../components/Header.vue"
+import Weather from "../components/Weather.vue"
+import Logo from "../components/Logo.vue"
+import Online from "../components/Online.vue"
 
 export default {
     components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo, Online },

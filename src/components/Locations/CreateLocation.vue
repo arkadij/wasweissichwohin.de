@@ -23,7 +23,8 @@
                 <div class="error">{{ fileError }}</div>
             </div>
             <div class="error"></div>
-            <button class="btn">Create</button>
+            <button v-if="!isLoading" class="btn">Create</button>
+            <button v-else disabled class="btn">Creating...</button>
         </div>
     </form>
 </template>
@@ -32,21 +33,40 @@
 
 import { ref } from 'vue'
 import useStorage from '@/composables/useStorage.js'
+import useCollection from '@/composables/useCollection.js'
+import getUser from '../../composables/getUser'
+import { timestamp } from '@/firebase/config.js'
+
 
 export default {
     setup(){
         const { filePath, url, addImg } = useStorage()
-
+        const { error, addDoc} = useCollection('locations')
+        const { user } = getUser()
         const title = ref('')
         const description = ref('')
         const file = ref(null)
         const fileError = ref(null)
-
+        const isLoading = ref(false)
 
         const handleSubmit = async () => {
             if(file.value) {
+                isLoading.value = true
                 await addImg(file.value)
-                console.log('img uploaded', url.value)
+                await addDoc({
+                    title: title.value,
+                    description: description.value,
+                    userId: user.value.uid,
+                    userName: user.value.displayName,
+                    locationUrl: url.value,
+                    filePath: filePath.value,
+                    locations: [],
+                    createdAt: timestamp()
+                })
+                if(!error.value){
+                    console.log('location added')
+                }
+                isLoading.value = false
             }
         }
 
@@ -63,7 +83,7 @@ export default {
             console.log(e.target.files)
         }
 
-        return {handleSubmit, title, description, handleChange, fileError}
+        return {handleSubmit, title, description, handleChange, fileError, isLoading}
     }
     
 }
