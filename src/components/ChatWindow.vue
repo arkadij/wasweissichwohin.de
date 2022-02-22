@@ -30,7 +30,6 @@ export default {
                 })
             }
         })
-        //auto scroll
         const messages = ref(null)
         onUpdated(() => {
             messages.value.scrollTop = messages.value.scrollHeight

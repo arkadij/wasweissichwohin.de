@@ -1,5 +1,5 @@
 <template>
-    <div class="locations-container">
+    <div class="location locations-container">
         <div class="logo flex">
             <Logo />
         </div>
@@ -12,15 +12,8 @@
             <Weather />
         </div>
         <!-- List of Location entries -->
-        <div class="entries flex bg-trinary">
-            <div v-if="error" class="error">Something is wrong..</div>
-            <div v-if="documents">
-                <div v-for="doc in documents" :key="doc.id">
-                    {{ doc.title }}
-                    {{ doc.description }}
-                    {{ doc.filePath }}
-                </div>
-            </div>
+        <div v-if="documents" class="entries flex">
+            <ListLocations :locations="documents"/>
         </div>
         <!-- Online -->
         <div class="online flex">
@@ -43,16 +36,18 @@ import Weather from "../components/Weather.vue"
 import Online from "../components/Online.vue"
 import Footer from "../components/Footer.vue"
 import Navbar from "../components/Navbar.vue"
+import ListLocations from '../components/ListLocations.vue'
 import getCollection from "../composables/getCollection.js"
 
+
+
 export default {
-    components: { Logo, Header, Weather, Online, Footer, Navbar },
+    components: { Logo, Header, Weather, Online, Footer, Navbar, ListLocations },
     setup(){
-        const { error, documents } = getCollection('locations')
-
-        return { error, documents }
-
+        const { documents } = getCollection('locations')
+        return { documents }
     }
+    
 }
 </script>
 

@@ -1,4 +1,4 @@
-import {ref} from 'vue'
+import { ref } from 'vue'
 import { projectFirestore } from '../firebase/config'
 import { watchEffect } from 'vue'
 
