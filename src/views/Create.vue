@@ -8,15 +8,15 @@
             <Header />
         </div>
         <!-- weather api-->
-        <div class="weather flex bg-error">
+        <div class="weather flex">
             <Weather />
         </div>
         <!-- Create Location-->
-        <div class="entries flex bg-trinary">
+        <div class="entries flex">
             <CreateLocation />
         </div>
         <!-- Online -->
-        <div class="online flex bg-error">
+        <div class="online flex ">
             <Online />
         </div>
         <div class="navbar flex">

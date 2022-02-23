@@ -1,5 +1,5 @@
 <template>
-  <div class="dark flex-wrap p-2 w-full h-full box-content overflow-auto bg-primary">
+  <div class="dark flex-wrap p-4 w-full h-full box-content overflow-auto bg-primary rounded-md">
       <div class="error" v-if="error">{{ error }}</div>
       <div v-if="documents" class="h-full overflow-auto" ref="messages">
           <div v-for="doc in formattedDocuments" 

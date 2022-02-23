@@ -1,7 +1,9 @@
 <template>
     <form>
-        <textarea class="w-full" placeholder="Message goes brrr"
+        <textarea class="w-full border-2 border-primary rounded mt-4" placeholder="Message goes brrr"
         v-model="message"
+        rows="8"
+        @keydown.shift.enter.prevent="text += '\n'"
         @keypress.enter.prevent="handleSubmit"
         >
         </textarea>
@@ -13,7 +15,7 @@
 <script>
 import { ref } from '@vue/reactivity'
 import getUser from '../composables/getUser'
-import { projectFirestore, timestamp } from '../firebase/config'
+import { timestamp } from '../firebase/config'
 import useCollection from '../composables/useCollection'
 export default {
     setup(){

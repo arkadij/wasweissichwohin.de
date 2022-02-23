@@ -11,7 +11,7 @@
             <!-- Description -->
             <div>
                 <label for="Description"></label>
-                <textarea required 
+                <textarea
                 placeholder="Additional information"
                 v-model="description"
                 ></textarea>

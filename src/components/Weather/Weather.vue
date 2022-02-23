@@ -1,18 +1,23 @@
 <template>
   
-    <div @vnode-mounted="fetchWeather">
-      <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
-        <div class="location-box">
-          <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>
-          <div class="date">{{ dateBuilder() }}</div>
+    <div class="w-full mt-2 mr-2 border-2 rounded-md shadow-md" @vnode-mounted="fetchWeather">
+      <div v-if="typeof weather.main != 'undefined'">
+        <div class="location-box pl-2 pt-1 pb-1 border-b-2 border-grey-400">
+          <div><div class="font-semibold inline-flex ">
+            {{ weather.name }} | {{ weather.sys.country }} </div>
+            <div class="inline-flex text-right">{{ dateBuilder() }}</div>
+          </div>
         </div>
 
-        <div class="weather-box">
-          <div class="temp"> {{ Math.round(weather.main.temp) }}°c </div>
-          <div class="weather"> {{ weather.weather[0].main }} </div>
-          <div v-if="weather.wind.speed < 1" class="wind"> {{ weather.wind.speed }} Calm </div>
-          <div v-if="weather.wind.speed > 1 && weather.wind.speed < 3" class="wind"> {{ weather.wind.speed }} Light Air </div>
-          <div v-if="weather.wind.speed > 3" class="wind"> {{ weather.wind.speed }} PLAY THE CONDITION! </div>    
+        <div class="pl-2">
+          <div> Feels like {{ weather.main.feels_like }}°c </div>
+          <div> {{ weather.clouds.all }}% Clouds </div>
+          <div v-if="weather.wind.gust > 0 && weather.wind.gust < 1"> {{ weather.wind.gust }} Calm</div>
+          <div v-if="weather.wind.gust > 1 && weather.wind.gust < 2 "> {{ weather.wind.gust }} Light Air</div>
+          <div v-if="weather.wind.gust > 2 && weather.wind.gust < 3"> {{ weather.wind.gust }} Gentle Breeze</div> 
+          <div v-if="weather.wind.gust > 3 && weather.wind.gust < 4"> {{ weather.wind.gust }} A bit windy</div>
+          <div v-if="weather.wind.gust > 5 && weather.wind.gust < 6"> {{ weather.wind.gust }} Windy</div>
+          <div v-if="weather.wind.gust > 6"> {{ weather.wind.gust }} Strong winds</div>     
         </div>
       </div>
     </div>

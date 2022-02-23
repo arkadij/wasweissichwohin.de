@@ -13,7 +13,7 @@
         </div>
         <!-- List of Location entries -->
         <div v-if="documents" class="entries flex">
-                <ListLocations :locations="documents"/> 
+            <ListLocations :locations="documents"/> 
         </div>
         <div v-if="showDetails" class="entries flex">
             <LocationDetails />

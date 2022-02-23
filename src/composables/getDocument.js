@@ -1,17 +1,14 @@
 import { ref, watchEffect } from 'vue'
 import { projectFirestore } from '../firebase/config'
 
-
-
-
 const getDocument = (collection, id) => {
-    const error = ref(null)
-    const documents = ref(null)
+    let error = ref(null)
+    let document = ref(null)
 
     let documentRef = projectFirestore.collection(collection).doc(id)
     
     //realtime listener to the firebase db
-    const unsub = documentRef.onSnapshot((snap) => {
+    const unsub = documentRef.onSnapshot(doc => {
         if(doc.data()) {
             document.value = {...doc.data(), id: doc.id}
             error.value = null

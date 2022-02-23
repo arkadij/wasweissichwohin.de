@@ -8,12 +8,18 @@
         <Header />
     </div>
     <!-- weather field -->
-    <div class="weather flex bg-error">
+    <div class="weather flex">
         <Weather />
     </div>
     <!-- Chat Window -->
     <div class="chatwindow flex">
         <ChatWindow />
+    </div>
+    <div class="input">
+        <!-- <div class="options">options</div> -->
+        <div class="input-field bg-primary">
+            <NewChatForm />
+        </div>    
     </div>
     <div class="navbar flex">
         <Navbar /> 
@@ -26,12 +32,7 @@
     <div class="footer flex">
         <Footer />
     </div>
-    <div class="input flex">
-        <!-- <div class="options">options</div> -->
-        <div class="input-field bg-primary">
-            <NewChatForm />
-        </div>    
-    </div>
+    
 </div>
 </template>
 

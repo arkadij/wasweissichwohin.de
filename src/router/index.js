@@ -55,7 +55,8 @@ const routes = [
     path: '/locations/:id',
     name: 'LocationDetails',
     component: LocationDetails,
-    beforeEnter: requireAuth
+    beforeEnter: requireAuth,
+    props:true
   }      
 ]
 
