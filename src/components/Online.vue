@@ -1,6 +1,7 @@
 <!-- Check getCollection, maybe we can use the Snapshot method. 
 Make a new db and store display name etc.,
  then get it to display all users currently logged in
+ onAuthStateChanged
 -->
 
 
@@ -16,6 +17,7 @@ Make a new db and store display name etc.,
 <script>
 
 import getUser from "../composables/getUser.js"
+import getCollection from "../composables/getCollection.js"
 
 export default {
     setup(){

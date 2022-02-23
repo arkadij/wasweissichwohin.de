@@ -32,7 +32,7 @@
 <script>
 import Logo from "../components/Logo.vue";
 import Header from "../components/Header.vue";
-import Weather from "../components/Weather.vue";
+import Weather from "../components/Weather/Weather.vue";
 import Online from "../components/Online.vue";
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";

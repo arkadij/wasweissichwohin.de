@@ -3,6 +3,7 @@ import Welcome from '../views/Welcome.vue'
 import Chatroom from '../views/Chatroom.vue'
 import Locations from '../views/Locations.vue'
 import Create from '../views/Create.vue'
+import LocationDetails from '@/components/Locations/LocationDetails.vue'
 import { projectAuth } from '../firebase/config.js'
 
 
@@ -49,7 +50,13 @@ const routes = [
     name: 'Create',
     component: Create,
     beforeEnter: requireAuth
-  }   
+  },
+  {
+    path: '/locations/:id',
+    name: 'LocationDetails',
+    component: LocationDetails,
+    beforeEnter: requireAuth
+  }      
 ]
 
 const router = createRouter({

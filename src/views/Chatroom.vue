@@ -45,7 +45,7 @@ import ChatWindow from '../components/ChatWindow.vue'
 import Navbar from "../components/Navbar.vue"
 import Footer from "../components/Footer.vue"
 import Header from "../components/Header.vue"
-import Weather from "../components/Weather.vue"
+import Weather from "../components/Weather/Weather.vue"
 import Logo from "../components/Logo.vue"
 import Online from "../components/Online.vue"
 

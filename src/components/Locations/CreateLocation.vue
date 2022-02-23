@@ -31,12 +31,15 @@
 
 <script>
 
-import { ref } from 'vue'
 import useStorage from '@/composables/useStorage.js'
 import useCollection from '@/composables/useCollection.js'
 import getUser from '../../composables/getUser'
-import { timestamp } from '@/firebase/config.js'
 
+import { ref } from 'vue'
+import { timestamp } from '@/firebase/config.js'
+import { useRouter } from 'vue-router'
+
+// Feature: Add input field for 52.4838071372108, 13.394362382077352 
 
 export default {
     setup(){
@@ -48,12 +51,13 @@ export default {
         const file = ref(null)
         const fileError = ref(null)
         const isLoading = ref(false)
+        const router = useRouter()
 
         const handleSubmit = async () => {
             if(file.value) {
                 isLoading.value = true
                 await addImg(file.value)
-                await addDoc({
+                const res = await addDoc({
                     title: title.value,
                     description: description.value,
                     userId: user.value.uid,
@@ -64,13 +68,14 @@ export default {
                     createdAt: timestamp()
                 })
                 if(!error.value){
-                    console.log('location added')
+                    router.push({ name: 'LocationDetails', params: { id: res.id }})
                 }
                 isLoading.value = false
             }
         }
 
         const types = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp']
+        
 
         const handleChange = (e) => {
             const selected = e.target.files[0]
