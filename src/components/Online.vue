@@ -6,10 +6,10 @@ Make a new db and store display name etc.,
 
 
 <template>
-    <div class="dark bg-primary w-full">
-        <h2 class="bg-green-400 w-full pl-2">Users online</h2>
+    <div class="w-full mt-2 mr-2 border-2 rounded-md shadow-md">
+        <h2 class="font-semibold pl-2 pt-1 pb-1 border-b-2 border-grey-400 bg-green-200">Users online</h2>
         <ul>
-            <li class="text-beige pl-2">{{  }}</li>
+            <li>{{  }}</li>
         </ul>   
     </div>
 </template>

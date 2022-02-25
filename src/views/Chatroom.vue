@@ -15,14 +15,18 @@
     <div class="chatwindow flex">
         <ChatWindow />
     </div>
-    <div class="input">
-        <!-- <div class="options">options</div> -->
-        <div class="input-field bg-primary">
+    <div class="input flex">
+        <div class="input-field w-full">
             <NewChatForm />
         </div>    
     </div>
+    <!-- Navbar -->
     <div class="navbar flex">
         <Navbar /> 
+    </div>
+    <!-- Logout -->
+    <div class="logout flex">
+        <Logout />
     </div>
     <!-- Online -->
     <div class="online flex">
@@ -49,9 +53,10 @@ import Header from "../components/Header.vue"
 import Weather from "../components/Weather/Weather.vue"
 import Logo from "../components/Logo.vue"
 import Online from "../components/Online.vue"
+import Logout from "../components/Logout.vue"
 
 export default {
-    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo, Online },
+    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo, Online, Logout },
     setup(){
         const { user } = getUser()
         const router = useRouter()

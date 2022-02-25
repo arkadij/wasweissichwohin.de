@@ -1,5 +1,5 @@
 <template>
-    <div class="location locations-container">
+    <div class="chatroom-container">
         <div class="logo flex">
             <Logo />
         </div>
@@ -15,15 +15,19 @@
         <div v-if="documents" class="entries flex">
             <ListLocations :locations="documents"/> 
         </div>
-        <div v-if="showDetails" class="entries flex">
+        <!-- <div v-if="showDetails" class="entries flex">
             <LocationDetails />
+        </div> -->
+        <div class="navbar flex">
+            <Navbar />
+        </div>
+        <!-- Logout -->
+        <div class="logout flex">
+             <Logout />
         </div>
         <!-- Online -->
         <div class="online flex">
             <Online />
-        </div>
-        <div class="navbar flex">
-            <Navbar />
         </div>
         <!-- Footer -->
         <div class="footer flex">
@@ -39,6 +43,7 @@ import Weather from "../components/Weather/Weather.vue"
 import Online from "../components/Online.vue"
 import Footer from "../components/Footer.vue"
 import Navbar from "../components/Navbar.vue"
+import Logout from "../components/Logout.vue"
 import ListLocations from '../components/ListLocations.vue'
 import getCollection from "../composables/getCollection.js"
 import LocationDetails from "../components/Locations/LocationDetails.vue"
@@ -46,7 +51,7 @@ import LocationDetails from "../components/Locations/LocationDetails.vue"
 import { ref } from 'vue'
 
 export default {
-    components: { Logo, Header, Weather, Online, Footer, Navbar, ListLocations, LocationDetails },
+    components: { Logo, Header, Weather, Online, Footer, Navbar, ListLocations, LocationDetails, Logout },
     setup(){
         const showDetails = ref(false)        
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="dark bg-secondary w-full">
-      <img class="w-4 h-4" src="" alt="Logo">
+  <div class="dark w-full m-2 border-2 rounded-full">
+      <img class="w-full h-full" src="@/assets/img/temp-logo.png" alt="Logo">
   </div>
 </template>
 

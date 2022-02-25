@@ -1,5 +1,5 @@
 <template>
-    <div class="locations-container">
+    <div class="chatroom-container">
         <div class="logo flex">
             <Logo />
         </div>
@@ -22,6 +22,10 @@
         <div class="navbar flex">
             <Navbar />
         </div>
+        <!-- Logout -->
+        <div class="logout flex">
+            <Logout />>
+        </div>
         <!-- Footer -->
         <div class="footer flex">
             <Footer />
@@ -36,9 +40,10 @@ import Weather from "../components/Weather/Weather.vue";
 import Online from "../components/Online.vue";
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
+import Logout from "../components/Logout.vue"
 import CreateLocation from "../components/Locations/CreateLocation.vue";
 export default {
-    components: { Logo, Header, Weather, Online, Footer, Navbar, CreateLocation }
+    components: { Logo, Header, Weather, Online, Footer, Navbar, CreateLocation, Logout }
 }
 </script>
 

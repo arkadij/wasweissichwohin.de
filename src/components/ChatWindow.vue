@@ -1,13 +1,13 @@
 <template>
-  <div class="dark flex-wrap p-4 w-full h-full box-content overflow-auto bg-primary rounded-md">
+  <div class="flex-wrap mt-2 p-4 w-full h-full box-content overflow-auto bg-gray-100 rounded-md shadow-md">
       <div class="error" v-if="error">{{ error }}</div>
       <div v-if="documents" class="h-full overflow-auto" ref="messages">
           <div v-for="doc in formattedDocuments" 
           :key="doc.id" 
           class="my-2">
-              <span class="block text-gray-300 text-xs">{{ doc.createdAt}}</span>
-              <span class="text-beige font-bold mr-1">{{ doc.name }}</span>
-              <span class="text-white">{{doc.message}}</span>
+              <span class="block text-gray-400 text-xs">{{ doc.createdAt}}</span>
+              <span class="text-secondary font-bold mr-1">{{ doc.name }}</span>
+              <span class="text-primary">{{doc.message}}</span>
           </div>
       </div>
   </div>

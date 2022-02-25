@@ -1,5 +1,5 @@
 <template>
-     <div class="dark bg-secondary w-full">
+     <div class="">
         
         
     </div>    
