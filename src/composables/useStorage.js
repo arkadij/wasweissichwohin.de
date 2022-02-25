@@ -13,8 +13,6 @@ const useStorage = () => {
     const addImg = async (file) => {
         error.value = null
         isLoading.value = true
-        // locations = covers
-        // filePath.value = `locations/${user.value.uid}/${file.name}`
         filePath.value = `locations/${user.value.uid}/${file.name}`
         const storageRef = projectStorage.ref(filePath.value)
         
@@ -30,7 +28,19 @@ const useStorage = () => {
         }
     }
 
-    return { error, url, filePath, isLoading, addImg }
+    const deleteImg = async (path) => {
+        const storageRef = projectStorage.ref(path)
+
+        try {
+            await storageRef.delete()
+            
+        } catch (err){
+            error.value = err.message
+        }
+    }
+
+
+    return { error, url, filePath, isLoading, addImg, deleteImg }
 }
 
 
