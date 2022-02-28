@@ -10,14 +10,14 @@
         </div>
 
         <div class="pl-2">
-          <div> Feels like {{ weather.main.feels_like }}°c </div>
+          <div> Feels like {{ Math.round(weather.main.feels_like) }}°c </div>
           <div> {{ weather.clouds.all }}% Clouds </div>
-          <div v-if="weather.wind.speed > 0 && weather.wind.speed < 1"> {{ weather.wind.speed }} Calm</div>
-          <div v-if="weather.wind.speed > 1 && weather.wind.speed < 2 "> {{ weather.wind.speed }} Light Air</div>
-          <div v-if="weather.wind.speed > 2 && weather.wind.speed < 3"> {{ weather.wind.speed }} Gentle Breeze</div> 
-          <div v-if="weather.wind.speed > 3 && weather.wind.speed < 4"> {{ weather.wind.speed }} A bit windy</div>
-          <div v-if="weather.wind.speed > 5 && weather.wind.speed < 6"> {{ weather.wind.speed }} Windy</div>
-          <div v-if="weather.wind.speed > 6"> {{ weather.wind.speed }} Strong winds</div>     
+          <div v-if="weather.wind.speed > 0 && weather.wind.speed < 1"> {{ Math.round(weather.wind.speed) }} Calm</div>
+          <div v-if="weather.wind.speed > 1 && weather.wind.speed < 2 "> {{ Math.round(weather.wind.speed) }} Light Air</div>
+          <div v-if="weather.wind.speed > 2 && weather.wind.speed < 3"> {{ Math.round(weather.wind.speed) }} Gentle Breeze</div> 
+          <div v-if="weather.wind.speed > 3 && weather.wind.speed < 4"> {{ Math.round(weather.wind.speed) }} A bit windy</div>
+          <div v-if="weather.wind.speed > 5 && weather.wind.speed < 6"> {{ Math.round(weather.wind.speed) }} Play the condition!</div>
+          <div v-if="weather.wind.speed > 6"> {{ Math.round(weather.wind.speed) }} Too windy.</div>     
         </div>
       </div>
     </div>

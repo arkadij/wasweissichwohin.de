@@ -1,10 +1,11 @@
 <template>
     <form>
-        <textarea class="w-full border-2 border-primary rounded mt-4" placeholder="Message goes brrr"
+        <textarea class="w-full border-2 border-primary rounded mt-4" 
+        placeholder="Message goes brrr"
         v-model="message"
         rows="8"
-        @keydown.shift.enter.prevent="text += '\n'"
-        @keypress.enter.prevent="handleSubmit"
+        @keydown.enter.exact.prevent="handleSubmit"
+        @keydown.enter.shift.exact.prevent="text += '\n'"
         >
         </textarea>
         <div class="error">{{ error }}</div>

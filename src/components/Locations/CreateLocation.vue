@@ -1,27 +1,35 @@
 <template>
-    <form @submit.prevent="handleSubmit">
-        <div>
+    <form @submit.prevent="handleSubmit" class="flex flex-col w-full mt-2 mr-2 border-2 rounded-md shadow-md">
+        <div class="flex-wrap flex flex-col">
             <!-- Title -->
-            <div>
-                <label for="Title">Title</label>
+            <div class="flex flex-col">
+                <label for="Title" class="flex-col">Title</label>
                 <input type="text" required 
                 placeholder="Title"
-                 v-model="title">
+                v-model="title"
+                 
+                 >
             </div>
             <!-- Description -->
-            <div>
+            <div class="flex-col bg-red-200">
                 <label for="Description"></label>
-                <textarea
-                placeholder="Additional information"
+                <textarea class="w-full"
                 v-model="description"
+                rows="8"
+                placeholder="Description / Additional information about the location"
+                
                 ></textarea>
             </div>
             <!-- Image upload -->
-            <div>
-                <label for="File">Upload Image of Location</label>
+            <div class="bg-green-200 flex flex-row p-2 items-center">
+                <label for="File" class="m-2">Upload Image of Location</label>
                 <input type="file" @change="handleChange">
                 <div class="error">{{ fileError }}</div>
             </div>
+            <!-- Checkboxes for more information
+            <div class="bg-green-200 flex flex-col p-4">
+                <input type="checkbox" class="checked:bg-blue-500" value="Smoking allowed">
+            </div> -->
             <div class="error"></div>
             <button v-if="!isLoading" class="btn">Create</button>
             <button v-else disabled class="btn">Creating...</button>
@@ -39,7 +47,8 @@ import { ref } from 'vue'
 import { timestamp } from '@/firebase/config.js'
 import { useRouter } from 'vue-router'
 
-// Feature: Add input field for 52.4838071372108, 13.394362382077352 
+// Add Feature: Add input field for 52.4838071372108, 13.394362382077352 
+// Add Checkboxes for more information.
 
 export default {
     setup(){

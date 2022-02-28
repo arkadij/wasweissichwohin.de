@@ -35,8 +35,7 @@
     <!-- Footer -->
     <div class="footer flex">
         <Footer />
-    </div>
-    
+    </div> 
 </div>
 </template>
 
@@ -69,7 +68,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
