@@ -1,10 +1,10 @@
 <template>
      <div class="w-full">
         <div class="flex items-center justify-center">
-                <button class="btn w-full m-2 shadow-md hover:border-pink-700" @click="handleClick">Logout</button>
+            <button class="btn" @click="handleClick">Logout</button>
         </div>
         <div class="flex items-center justify-center ">
-                <button class="btn w-full m-2 shadow-md" @click="darkMode">Dark Mode</button>
+            <button class="btn" @click="darkMode">Dark Mode</button>
         </div>
     </div>    
 </template>

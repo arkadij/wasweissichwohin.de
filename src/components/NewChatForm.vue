@@ -1,15 +1,15 @@
 <template>
     <form>
-        <textarea class="w-full border-2 border-primary rounded mt-4" 
-        placeholder="Message goes brrr"
+        <textarea class="w-full border-2 border-onprimary100 rounded mt-9" 
+        placeholder="Press Enter to Send / Shift + Enter for a new Line"
         v-model="message"
         rows="8"
-        @keydown.enter.exact.prevent="handleSubmit"
-        @keydown.enter.shift.exact.prevent="text += '\n'"
+        @keypress.enter.exact.prevent="handleSubmit"
+        @keydown.shift.enter.exact.prevent="text += '\n'"
         >
         </textarea>
         <div class="error">{{ error }}</div>
-        <button class="btn" @click.prevent="handleSubmit">Send</button> 
+        <button class="font-heading border-2 w-auto px-6 mb-1 border-secondary border-solid hover:border-onprimary" @click.prevent="handleSubmit">Send</button> 
     </form>
 </template>
 

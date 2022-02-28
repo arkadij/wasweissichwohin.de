@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#495371',
-        secondary: '#384057',
-        trinary: '#74959A',
-        quaternary: '#98B4AA',
-        beige:'#F1E0AC',
-        error: '#C84B31',
+        primary: '#e0fbfc', // Light cyan
+        onprimary:'#293241', // Gunmetal
+        onprimary200:'#3F4D64', // Independance 
+        onprimary100:'#7588a9', // shadow blue / input fields bg
+        secondary: '#3d5a80', // bdazzled blue
+        error: '#B00020', //  Red 
       },
       fontFamily: {
         body:['Bebas Neue'],

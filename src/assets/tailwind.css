@@ -1,23 +1,31 @@
+/* primary: '#e0fbfc', // Light cyan
+   onprimary:'#293241', // Gunmetal
+   onprimary200:'#3F4D64', // Independance 
+   onprimary100:'#7588a9', // shadow blue / input fields bg
+   secondary: '#3d5a80', // bdazzled blue
+   error: '#B00020', //  Red  */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.navbar-icon{
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mx-auto 
-    text-primary hover:text-green-600 transition-all;
-}
+.navbar-link{
+    @apply font-heading flex items-center justify-center text-lg text-secondary h-16 hover:text-onprimary;
+} 
 .btn{
-    @apply bg-transparent border-2 border-gray-900 border-solid py-0.5 px-3;
+    @apply font-heading w-full m-2 border-2 border-secondary border-solid py-0.5 px-3 hover:border-onprimary;
+}
+.welcome-form-btn{
+    @apply font-heading w-full border-2 border-secondary border-solid py-0.5 hover:border-onprimary;
 }
 .error{@apply text-error text-sm font-bold uppercase}
 
 .input-fields-welcome{
     @apply 
-    bg-gray-200 appearance-none border-2   
-    border-gray-200 rounded w-full py-2 px-4 
-    text-gray-700 leading-tight focus:outline-none
-    focus:bg-white focus:border-purple-500
+    bg-onprimary100 appearance-none border-2   
+    border-gray-100 rounded w-full py-2 px-4 shadow-md 
+    text-secondary leading-tight focus:outline-none
+    focus:bg-white focus:border-secondary
 }
 .chatroom-container{
     display: grid; 

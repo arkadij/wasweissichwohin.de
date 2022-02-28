@@ -31,9 +31,10 @@
                 <input type="checkbox" class="checked:bg-blue-500" value="Smoking allowed">
             </div> -->
             <div class="error"></div>
-            <button v-if="!isLoading" class="btn">Create</button>
-            <button v-else disabled class="btn">Creating...</button>
+            
         </div>
+        <button v-if="!isLoading" class="font-heading border-2 px-6 mb-1 border-secondary border-solid hover:border-onprimary">Create</button>
+        <button v-else disabled class="font-heading border-2 px-6 mb-1 border-secondary border-solid hover:border-onprimary">Creating...</button>
     </form>
 </template>
 

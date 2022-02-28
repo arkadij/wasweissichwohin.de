@@ -4,13 +4,13 @@
       <div v-if="showLogin">
         <LoginForm @login="enterChatroom" />
         <div class="text-center pt-2">
-          <button @click="showLogin = false"> Show Sign Up</button>
+          <button @click="showLogin = false"> Don't have an Account yet? <p class="text-secondary font-heading mt-2 font-medium hover:text-onprimary">Sign up!</p></button>
         </div>
       </div>
       <div v-else>
         <SignupForm @signup="enterChatroom" />
         <div class="text-center pt-2">
-          <button @click="showLogin = true"> Swap Log in</button>
+          <button @click="showLogin = true"> Already have an Account? <p class="text-secondary font-heading mt-2 ffont-medium hover:text-onprimary">Log in</p></button>
         </div>
       </div>
     </div>

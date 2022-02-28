@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full mt-2 items-center p-6 border-b-2 border-grey-400 shadow-md rounded">
-        <h1 class="text-primary text-xl">WasWeissIchWohin.de</h1>
-        <h2 class="text-gray-400 text-sm mt-1">Find people for table tennis</h2>
+    <div class="w-full bg-primary mt-2 items-center border-gray-100 border-2 p-6 shadow-md rounded">
+        <h1 class="text-onprimary text-xl font-heading leading-relaxed">WasWeissIchWohin.de</h1>
+        <h2 class="text-onprimary100 text-sm mt-1 font-heading">Find people for table tennis</h2>
     </div>    
     
 </template>

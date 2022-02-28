@@ -1,23 +1,23 @@
 <template>
   
-    <div class="w-full mt-2 mr-2 border-2 rounded-md shadow-md" @vnode-mounted="fetchWeather">
+    <div class="w-full mt-2 mr-2 rounded-md shadow-md bg-primary border-gray-100 border-2" @vnode-mounted="fetchWeather">
       <div v-if="typeof weather.main != 'undefined'">
-        <div class="location-box pl-2 pt-1 pb-1 border-b-2 border-grey-400">
+        <div class="location-box pl-2 pt-1 pb-1 border-b-2 border-onprimary">
           <div><div class="font-semibold inline-flex ">
-            {{ weather.name }} | {{ weather.sys.country }}</div>
-            <div class="inline-flex text-right">{{ dateBuilder() }}</div>
+            {{ weather.name }} | {{ weather.sys.country }} | </div>
+            <div class="inline-flex text-right"> {{dateBuilder() }}</div>
           </div>
         </div>
 
         <div class="pl-2">
           <div> Feels like {{ Math.round(weather.main.feels_like) }}°c </div>
-          <div> {{ weather.clouds.all }}% Clouds </div>
+          <div> {{ weather.clouds.all }}% Clouds in the sky </div>
           <div v-if="weather.wind.speed > 0 && weather.wind.speed < 1"> {{ Math.round(weather.wind.speed) }} Calm</div>
           <div v-if="weather.wind.speed > 1 && weather.wind.speed < 2 "> {{ Math.round(weather.wind.speed) }} Light Air</div>
           <div v-if="weather.wind.speed > 2 && weather.wind.speed < 3"> {{ Math.round(weather.wind.speed) }} Gentle Breeze</div> 
-          <div v-if="weather.wind.speed > 3 && weather.wind.speed < 4"> {{ Math.round(weather.wind.speed) }} A bit windy</div>
+          <div v-if="weather.wind.speed > 3 && weather.wind.speed < 4"> {{ Math.round(weather.wind.speed) }} a bit windy</div>
           <div v-if="weather.wind.speed > 5 && weather.wind.speed < 6"> {{ Math.round(weather.wind.speed) }} Play the condition!</div>
-          <div v-if="weather.wind.speed > 6"> {{ Math.round(weather.wind.speed) }} Too windy.</div>     
+          <div v-if="weather.wind.speed > 6"> {{ Math.round(weather.wind.speed) }} Too.windy.To.Play.Outside.Period.</div>     
         </div>
       </div>
     </div>
