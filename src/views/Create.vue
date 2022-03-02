@@ -1,5 +1,5 @@
 <template>
-    <div class="chatroom-container">
+    <div class="container">
         <div class="logo flex">
             <Logo />
         </div>
@@ -12,7 +12,7 @@
             <Weather />
         </div>
         <!-- Create Location-->
-        <div class="entries flex">
+        <div class="content flex">
             <CreateLocation />
         </div>
         <!-- Online -->
@@ -24,7 +24,7 @@
         </div>
         <!-- Logout -->
         <div class="logout flex">
-            <Logout />>
+            <Logout />
         </div>
         <!-- Footer -->
         <div class="footer flex">

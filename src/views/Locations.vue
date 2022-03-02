@@ -1,5 +1,6 @@
 <template>
-    <div class="chatroom-container">
+    <div class="container">
+        <!-- Logo -->
         <div class="logo flex">
             <Logo />
         </div>
@@ -12,7 +13,7 @@
             <Weather />
         </div>
         <!-- List of Location entries -->
-        <div v-if="documents" class="entries flex">
+        <div v-if="documents" class="content flex">
             <ListLocations :locations="documents"/> 
         </div>
         <!-- <div v-if="showDetails" class="entries flex">

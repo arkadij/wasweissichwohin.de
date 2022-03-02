@@ -1,19 +1,27 @@
 <template>
-    <form @submit.prevent="handleSubmit" class="flex flex-col w-full mt-2 mr-2 border-2 rounded-md shadow-md">
+    <form @submit.prevent="handleSubmit" class="flex flex-col mb-2 w-full  p-4">
         <div class="flex-wrap flex flex-col">
             <!-- Title -->
-            <div class="flex flex-col">
-                <label for="Title" class="flex-col">Title</label>
-                <input type="text" required 
-                placeholder="Title"
-                v-model="title"
-                 
-                 >
+            <div class="md:block md:items-center">
+                <div class="md:w-1/3 flex-inline mb-4">
+                    <input 
+                    class="input-fields-create"
+                    type="text" required 
+                    placeholder="Title"
+                    v-model="title"
+                    >
+                    <input 
+                    class="input-fields-create"
+                    type="text" required 
+                    placeholder="Kiez"
+                    v-model="kiez"
+                    >
+                    <input type="checkbox" class="checked:bg-primary" value="Smoking allowed">
+                </div>
             </div>
             <!-- Description -->
-            <div class="flex-col bg-red-200">
-                <label for="Description"></label>
-                <textarea class="w-full"
+            <div class="md:block md:items-center mb-4">
+                <textarea class="input-fields-create"
                 v-model="description"
                 rows="8"
                 placeholder="Description / Additional information about the location"
@@ -21,20 +29,20 @@
                 ></textarea>
             </div>
             <!-- Image upload -->
-            <div class="bg-green-200 flex flex-row p-2 items-center">
+            <div class="bg-onprimary100 flex flex-row p-2 items-center rounded mb-4">
                 <label for="File" class="m-2">Upload Image of Location</label>
-                <input type="file" @change="handleChange">
+                <input type="file" class="hover:file:bg-violet-100" @change="handleChange">
                 <div class="error">{{ fileError }}</div>
             </div>
             <!-- Checkboxes for more information
             <div class="bg-green-200 flex flex-col p-4">
-                <input type="checkbox" class="checked:bg-blue-500" value="Smoking allowed">
+                
             </div> -->
             <div class="error"></div>
-            
+            <button v-if="!isLoading" class="md:w-1/3 font-heading border-2 border-secondary border-solid hover:border-onprimary">Create</button>
+        <button v-else disabled class="md:w-1/3 font-heading border-2 border-secondary border-solid hover:border-onprimary">Creating...</button>
         </div>
-        <button v-if="!isLoading" class="font-heading border-2 px-6 mb-1 border-secondary border-solid hover:border-onprimary">Create</button>
-        <button v-else disabled class="font-heading border-2 px-6 mb-1 border-secondary border-solid hover:border-onprimary">Creating...</button>
+        
     </form>
 </template>
 
@@ -57,6 +65,7 @@ export default {
         const { error, addDoc} = useCollection('locations')
         const { user } = getUser()
         const title = ref('')
+        const kiez = ref('')
         const description = ref('')
         const file = ref(null)
         const fileError = ref(null)
@@ -69,6 +78,7 @@ export default {
                 await addImg(file.value)
                 const res = await addDoc({
                     title: title.value,
+                    kiez: kiez.value,
                     description: description.value,
                     userId: user.value.uid,
                     userName: user.value.displayName,
@@ -98,7 +108,7 @@ export default {
             console.log(e.target.files)
         }
 
-        return {handleSubmit, title, description, handleChange, fileError, isLoading}
+        return {handleSubmit, title,kiez, description, handleChange, fileError, isLoading}
     }
     
 }

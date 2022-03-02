@@ -1,17 +1,20 @@
 <template>
-  <div class="error" v-if="error">{{ error }}</div>
-  <div v-if="location" class="location-details">
-
-    <!-- location information -->
-    <div class="location-info">
-      <div class="cover">
-        <img :src="location.locationUrl">
-      </div>
-      <h2>{{ location.title }}</h2>
-      <p class="username">Created by {{ location.userName }}</p>
-      <p class="description">{{ location.description }}</p>
-      <button class="btn" @click="handleDelete()" v-if="ownership">Delete location</button>
+  
+  <div class="flex flex-col">
+    <div class="error" v-if="error">{{ error }}</div>
       
+      <div v-if="location" class="location-details">
+      <!-- location Detail -->
+      <div class="flex flex-col">
+        <div class="flex h-48 w-48 flex-shrink-0">
+          <img :src="location.locationUrl">
+        </div>
+        <h2>{{ location.title }}</h2>
+            <p>{{ location.kiez }}</p>
+            <p class="username">Created by {{ location.userName }}</p>
+            <p class="description">{{ location.description }}</p>
+        <button class="md:w-1/3 font-heading border-2 border-secondary border-solid hover:border-onprimary" @click="handleDelete()" v-if="ownership">Delete location</button>
+      </div>
     </div>
   </div>
 </template>

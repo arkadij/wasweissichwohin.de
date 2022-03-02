@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#e0fbfc', // Light cyan
+        primary: '#B5F6F7', // Celeste
         onprimary:'#293241', // Gunmetal
         onprimary200:'#3F4D64', // Independance 
         onprimary100:'#7588a9', // shadow blue / input fields bg

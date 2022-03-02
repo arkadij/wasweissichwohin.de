@@ -5,7 +5,7 @@
         <div class="location-box pl-2 pt-1 pb-1 border-b-2 border-onprimary">
           <div><div class="font-semibold inline-flex ">
             {{ weather.name }} | {{ weather.sys.country }} | </div>
-            <div class="inline-flex text-right"> {{dateBuilder() }}</div>
+            <div class="inline-flex text-left md:text-right text-base"> {{dateBuilder() }}</div>
           </div>
         </div>
 

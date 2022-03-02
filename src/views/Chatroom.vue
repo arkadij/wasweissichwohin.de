@@ -1,10 +1,11 @@
 <template>
-  <div class="chatroom-container">
+  <div class="container md:">
+    <!-- Logo -->
     <div class="logo flex">
         <Logo />
     </div>
     <!-- Header -->
-    <div class="header flex justify-start">
+    <div class="header flex">
         <Header />
     </div>
     <!-- weather field -->
@@ -12,11 +13,11 @@
         <Weather />
     </div>
     <!-- Chat Window -->
-    <div class="chatwindow flex">
+    <div class="content flex">
         <ChatWindow />
     </div>
-    <div class="input flex">
-        <div class="input-field w-full">
+    <div class="input">
+        <div class="input-field">
             <NewChatForm />
         </div>    
     </div>
