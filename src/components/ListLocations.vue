@@ -1,5 +1,5 @@
 <template>
-<div class="grid grid-cols-2 gap-4 place-content-around hover:place-content-center my-2 box-content overflow-auto">
+<div class="grid grid-cols-4 mx-auto gap-4 place-content-around hover:place-content-center my-2 box-content overflow-auto">
     <div class="" v-for="loc in locations" :key="loc.id">
         <router-link :to="{ name: 'LocationDetails', params: { id: loc.id }}">
             <!-- Single Location Card  -->

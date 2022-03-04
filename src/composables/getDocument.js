@@ -7,7 +7,6 @@ const getDocument = (collection, id) => {
 
     let documentRef = projectFirestore.collection(collection).doc(id)
     
-    //realtime listener to the firebase db
     const unsub = documentRef.onSnapshot(doc => {
         if(doc.data()) {
             document.value = {...doc.data(), id: doc.id}
@@ -15,8 +14,6 @@ const getDocument = (collection, id) => {
         } else {
             error.value = 'Document 404'
         }
-          
-       
     }, (err) => {
         console.log(err.message)
         error.value = 'could not fetch the doc'
