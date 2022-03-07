@@ -4,8 +4,8 @@
         placeholder="Press Enter to Send / Shift + Enter for a new Line"
         v-model="message"
         rows="8"
-        @keypress.enter.exact.prevent="handleSubmit"
-        @keydown.shift.enter.exact.prevent="text += '\n'"
+        @keyup.enter.shift.exact.prevent="text += '\n'"
+        @keydown.enter.exact.prevent="handleSubmit"
         >
         </textarea>
         <div class="error">{{ error }}</div>
