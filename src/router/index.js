@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Welcome from '../views/Welcome.vue'
 import Chatroom from '../views/Chatroom.vue'
-import Locations from '../views/Locations.vue'
-import Create from '../views/Create.vue'
 import LocationDetails from '@/components/Locations/LocationDetails.vue'
 import { projectAuth } from '../firebase/config.js'
 
@@ -42,13 +40,13 @@ const routes = [
   {
     path: '/locations',
     name: 'Locations',
-    component: Locations,
+    component: () => import('../views/Locations.vue'),
     beforeEnter: requireAuth
   },
   {
     path: '/locations/create',
     name: 'Create',
-    component: Create,
+    component: () => import('../views/Create.vue'),
     beforeEnter: requireAuth
   },
   {

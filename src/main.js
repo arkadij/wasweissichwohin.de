@@ -15,3 +15,9 @@ projectAuth.onAuthStateChanged(() => {
         .mount('#app')
     }
 })
+
+// setup sentry 
+app.config.Vue.config.errorHandler = function (err, vm, info) {
+    // handle error
+}
+app.config.Vue.config.performance = true
