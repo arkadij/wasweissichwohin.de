@@ -3,6 +3,10 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      padding: {
+        '1/3': '33.33333%',
+        '2/3': '66.66667%'
+      },
       colors: {
         primary: '#B5F6F7', // Celeste
         onprimary:'#293241', // Gunmetal
@@ -21,5 +25,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }

@@ -1,9 +1,9 @@
-import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/tailwind.css'
 import './assets/main.css'
 import { projectAuth } from './firebase/config'
+import { createApp } from 'vue'
 
 
 let app
@@ -17,7 +17,7 @@ projectAuth.onAuthStateChanged(() => {
 })
 
 // setup sentry 
-app.config.Vue.config.errorHandler = function (err, vm, info) {
-    // handle error
-}
-app.config.Vue.config.performance = true
+// app.config.Vue.config.errorHandler = function (err, vm, info) {
+//     // handle error
+// }
+// app.config.Vue.config.performance = true

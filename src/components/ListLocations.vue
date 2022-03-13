@@ -1,14 +1,14 @@
 <template>
-<div class="grid grid-cols-4 mx-auto gap-4 place-content-around hover:place-content-center my-2 box-content overflow-auto">
+<div class="w-full font-heading grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-4 gap-6 my-2 box-content overflow-auto">
     <div class="" v-for="loc in locations" :key="loc.id">
         <router-link :to="{ name: 'LocationDetails', params: { id: loc.id }}">
             <!-- Single Location Card  -->
-            <div class="p-8 rounded-md bg-primary mb-4 transition-all hover:bg-secondary hover:text-white shadow-md">
-                <div class="locationImg">
-                    <img class="max-h-32" :src="loc.locationUrl">
+            <div class="rounded-md mb-4 transition-all hover:bg-primary shadow">
+                <div class="aspect-w-4 aspect-h-2">
+                    <img class="object-cover rounded-t-md" :src="loc.locationUrl">
                 </div>
                 <div class="locationContent p-2">
-                    <h2 class="font-heading font-medium hover:text-white">{{ loc.title }}</h2>
+                    <h2>{{ loc.title }}</h2>
                     <p class="text-sm text-gray-400">posted by {{ loc.userName }}</p>
                 </div>
             </div>
