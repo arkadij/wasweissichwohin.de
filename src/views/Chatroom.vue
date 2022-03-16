@@ -1,5 +1,5 @@
 <template>
-  <div class="container md:">
+  <div class="container">
     <!-- Logo -->
     <div class="logo flex">
         <Logo />
@@ -12,9 +12,9 @@
     <div class="weather flex">
         <Weather />
     </div>
-    <!-- Chat Window -->
+    <!-- Content / Defaut ChatWindow -->
     <div class="content flex">
-        <ChatWindow />
+            <ChatWindow />
     </div>
     <div class="input">
         <div class="input-field">
@@ -56,7 +56,9 @@ import Online from "../components/Online.vue"
 import Logout from "../components/Logout.vue"
 
 export default {
-    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo, Online, Logout },
+    components: { NewChatForm, ChatWindow, Navbar, Footer, Header, Weather, Logo, Online, Logout, 
+    
+    },
     setup(){
         const { user } = getUser()
         const router = useRouter()

@@ -29,7 +29,7 @@
         <!-- Footer -->
         <div class="footer flex">
             <Footer />
-        </div>
+        </div> 
     </div>    
 </template>
 
@@ -42,6 +42,7 @@ import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
 import Logout from "../components/Logout.vue"
 import CreateLocation from "../components/Locations/CreateLocation.vue";
+
 export default {
     components: { Logo, Header, Weather, Online, Footer, Navbar, CreateLocation, Logout }
 }

@@ -16,9 +16,6 @@
         <div v-if="documents" class="content flex">
             <ListLocations :locations="documents"/> 
         </div>
-        <!-- <div v-if="showDetails" class="entries flex">
-            <LocationDetails />
-        </div> -->
         <div class="navbar flex">
             <Navbar />
         </div>
@@ -47,12 +44,12 @@ import Navbar from "../components/Navbar.vue"
 import Logout from "../components/Logout.vue"
 import ListLocations from '../components/ListLocations.vue'
 import getCollection from "../composables/getCollection.js"
-import LocationDetails from "../components/Locations/LocationDetails.vue"
+
 
 import { ref } from 'vue'
 
 export default {
-    components: { Logo, Header, Weather, Online, Footer, Navbar, ListLocations, LocationDetails, Logout },
+    components: { Logo, Header, Weather, Online, Footer, Navbar, ListLocations, Logout },
     setup(){
         const showDetails = ref(false)        
 
