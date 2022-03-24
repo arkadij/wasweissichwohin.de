@@ -1,3 +1,4 @@
+<!-- Loading each Component in each view kind of beats the purpose. There's a better practice to this, change this later -->
 <template>
   <div class="container">
     <!-- Logo -->
